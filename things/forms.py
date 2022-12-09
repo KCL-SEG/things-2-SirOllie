@@ -24,10 +24,10 @@ class ThingForm(forms.ModelForm):
         if len(description) > 120:
             self.add_error("description", "Cannot be longer than 120 characters")
 
-        thing = Thing.objects.create_user(
-        self.cleaned_data.get("name"),
-        description=self.cleaned_data.get("description"),
-        quantity=self.cleaned_data.get("quantity"),
-        )
+    #    thing = Thing.objects.create_user(
+        #self.cleaned_data.get("name"),
+        #description=self.cleaned_data.get("description"),
+        #quantity=self.cleaned_data.get("quantity"),
+        #)
 
-        return thing
+        #return thing
