@@ -8,3 +8,12 @@ class Thing(models.Model):
         validators=[MinValueValidator(0),MaxValueValidator(50)]
     )
     created_at = models.DateTimeField(auto_now_add=True)
+
+    def create_user(self, name, description, quuantity):
+        if not name:
+            raise ValueError("An name must be provided.")
+
+        user = self.model(name=name, **extra_fields)
+        user.save()
+
+        return user
