@@ -12,7 +12,7 @@ class ThingForm(forms.ModelForm):
 
         name = forms.CharField(label="name",
                             widget=forms.TextInput(attrs={"placeholder": "e.g. John"}))
-        description = forms.CharField(label="Description",
+        description = forms.CharField(label="description",
                             widget=forms.Textarea())
 
         quantity = forms.IntegerField(label="quantity",
