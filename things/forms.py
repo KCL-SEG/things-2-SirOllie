@@ -28,6 +28,6 @@ class ThingForm(forms.ModelForm):
         self.cleaned_data.get("name"),
         description=self.cleaned_data.get("description"),
         quantity=self.cleaned_data.get("quantity"),
-    )
+        )
 
-    return thing
+        return thing
