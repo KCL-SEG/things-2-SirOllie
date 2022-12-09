@@ -13,7 +13,7 @@ class ThingForm(forms.ModelForm):
         name = forms.CharField(label="name",
                             widget=forms.TextInput(attrs={"placeholder": "e.g. John"}))
         description = forms.CharField(label="description",
-                            widget=forms.Textarea())
+                            widget=forms.Textarea(attrs={"rows":5, "cols":5}))
 
         quantity = forms.IntegerField(label="quantity",
                             widget=forms.NumberInput(attrs={"placeholder": "e.g. 88"}))
